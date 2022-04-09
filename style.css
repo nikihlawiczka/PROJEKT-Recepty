@@ -34,7 +34,6 @@ Na rozložení prvků NEPOUŽÍVEJ absolutní pozicování, ale pouze flexboxy.
 Flexboxy mohou být vnořené do sebe, klidně několikrát.
 */
 
-
 /* ------boxy---------- */
 
 .velkyrecept {
@@ -129,7 +128,7 @@ p {
 
 @media screen and (min-width: 480px) {
 
-	/* boxy */
+/* box */
 	.velkyrecept {
 		min-height: 250px;
 	}
@@ -153,7 +152,7 @@ p {
 		border-right: 1px solid white;
 	}
 
-	/* texty */
+/* texty */
 	.velkyh1 {
 		font-size: 36px;
 		padding-left: 20px;
@@ -171,14 +170,14 @@ p {
 
 /* ---------pc od 860px------- */
 @media screen and (min-width: 860px) {
-	/* box */
+	
+/* box */
 	.kontejner {
 		display: flex;
 	}
 
 	.velkyrecept {
 		min-height: 400px;
-
 		border-right: 1px solid white;
 	}
 
@@ -186,7 +185,7 @@ p {
 		min-height: 200px;
 	}
 
-	/* texty */
+/* texty */
 	.velkyh1 {
 		padding-right: 20px;
 		font-size: 48px;
