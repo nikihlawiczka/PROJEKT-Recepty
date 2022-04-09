@@ -77,7 +77,7 @@ Flexboxy mohou být vnořené do sebe, klidně několikrát.
 .recept4 {
 	display: flex;
 	flex-wrap: wrap;
-	
+
 	min-height: 90px;
 	background-image: url(images/burger.jpg);
 	background-size: cover;
@@ -88,12 +88,16 @@ Flexboxy mohou být vnořené do sebe, klidně několikrát.
 
 /* -----------texty--------------- */
 
+p {
+	margin: 0;
+}
+
 .komentare {
 	display: flex;
 	justify-content: space-between;
 	flex: 1 1 100%;
 	margin: 0;
-	padding: 0 10px;
+	padding: 10px 10px 0 10px;
 
 	font-family: 'Source Sans Pro', sans-serif;
 	font-size: 14px;
