@@ -1,20 +1,26 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-html { box-sizing: border-box; }
-*, :after, :before { box-sizing: inherit; }
+html {
+  box-sizing: border-box;
+}
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
 
 body {
-	margin: 0;
-	font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .paticka {
-	text-align: center;
-	font-size: 14px;
-	color: silver;
+  text-align: center;
+  font-size: 14px;
+  color: silver;
 }
 
 .paticka a {
-	color: silver;
+  color: silver;
 }
 
 /* -------------------------------------------------- */
@@ -37,162 +43,158 @@ Flexboxy mohou být vnořené do sebe, klidně několikrát.
 /* ------boxy---------- */
 
 .velkyrecept {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 
-	min-height: 200px;
-	background-image: url(images/salat.jpg);
-	background-size: cover;
-	border-bottom: 1px solid white;
+  min-height: 200px;
+  background-image: url(images/salat.jpg);
+  background-size: cover;
+  /* border-bottom: 1px solid white; */
 }
 
-.recept1 {
-	background-image: url(images/chlebicek.jpg);
-	background-size: cover;
+.avokado {
+  background-image: url(images/chlebicek.jpg);
+  background-size: cover;
 }
 
-.recept2 {
-	background-image: url(images/tacos.jpg);
-	background-size: cover;
+.tacos {
+  background-image: url(images/tacos.jpg);
+  background-size: cover;
 }
 
-.recept3 {
-	background-image: url(images/cizrna.jpg);
-	background-size: cover;
+.cizrna {
+  background-image: url(images/cizrna.jpg);
+  background-size: cover;
 }
 
-.recept4 {
-	background-image: url(images/burger.jpg);
-	background-size: cover;
+.burger {
+  background-image: url(images/burger.jpg);
+  background-size: cover;
 }
 
-.recept1,
-.recept2,
-.recept3,
-.recept4 {
-	display: flex;
-	flex-wrap: wrap;
+.avokado,
+.tacos,
+.cizrna,
+.burger {
+  display: flex;
+  flex-wrap: wrap;
 
-	min-height: 90px;
-	border-bottom: 1px solid white;
+  min-height: 90px;
+  /* border-bottom: 1px solid white; */
 }
-
 
 /* -----------texty--------------- */
 
 p {
-	margin: 0;
+  margin: 0;
 }
 
 .komentare {
-	display: flex;
-	justify-content: space-between;
-	flex: 1 1 100%;
-	margin: 0;
-	padding: 10px 10px 0 10px;
+  display: flex;
+  justify-content: space-between;
+  flex: 1 1 100%;
+  margin: 0;
+  padding: 10px 10px 0 10px;
 
-	font-family: 'Source Sans Pro', sans-serif;
-	font-size: 14px;
-	font-weight: 400;
-	color: white;
-	text-shadow: 2px 2px 5px grey;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  text-shadow: 2px 2px 5px grey;
 }
 
 .velkyh1 {
-	display: flex;
-	align-items: flex-end;
-	margin-bottom: 10px;
-	padding-left: 10px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  padding-left: 10px;
 
-	font-family: 'Raleway', sans-serif;
-	color: white;
-	font-size: 28px;
-	font-weight: 800;
-	text-shadow: 2px 2px 5px grey;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  font-size: 28px;
+  font-weight: 800;
+  text-shadow: 2px 2px 5px grey;
 }
 
 .malyh1 {
-	display: flex;
-	align-items: flex-end;
-	margin-bottom: 10px;
-	padding-left: 10px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  padding-left: 10px;
 
-	font-family: 'Raleway', sans-serif;
-	color: white;
-	font-size: 18px;
-	font-weight: 800;
-	text-shadow: 2px 2px 5px grey;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+  text-shadow: 2px 2px 5px grey;
 }
 
 /* ---------tablet od 480px------- */
 
 @media screen and (min-width: 480px) {
+  /* box */
+  .velkyrecept {
+    min-height: 250px;
+  }
 
-/* box */
-	.velkyrecept {
-		min-height: 250px;
-	}
+  .malerecepty {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-	.malerecepty {
-		display: flex;
-		flex-wrap: wrap;
-	}
+  .avokado,
+  .tacos,
+  .cizrna,
+  .burger {
+    flex: 1 1 calc(100% / 2);
 
-	.recept1,
-	.recept2,
-	.recept3,
-	.recept4 {
-		flex: 1 1 calc(100% / 2);
-		
-		min-height: 150px;
-	}
+    min-height: 150px;
+  }
 
-	.recept1,
-	.recept3 {
-		border-right: 1px solid white;
-	}
+  .avokado,
+  .cizrna {
+    /* border-right: 1px solid white; */
+  }
 
-/* texty */
-	.velkyh1 {
-		font-size: 36px;
-		padding-left: 20px;
-	}
+  /* texty */
+  .velkyh1 {
+    font-size: 36px;
+    padding-left: 20px;
+  }
 
-	.malyh1 {
-		font-size: 22px;
-		padding-left: 20px;
-	}
+  .malyh1 {
+    font-size: 22px;
+    padding-left: 20px;
+  }
 
-	.komentare {
-		padding: 20px 20px 0 20px;
-	}
+  .komentare {
+    padding: 20px 20px 0 20px;
+  }
 }
 
 /* ---------pc od 860px------- */
 @media screen and (min-width: 860px) {
-	
-/* box */
-	.kontejner {
-		display: flex;
-	}
+  /* box */
+  .kontejner {
+    display: flex;
+  }
 
-	.velkyrecept {
-		min-height: 400px;
-		border-right: 1px solid white;
-	}
+  .velkyrecept {
+    min-height: 400px;
+    /* border-right: 1px solid white; */
+  }
 
-	.malerecepty {
-		min-height: 200px;
-	}
+  .malerecepty {
+    min-height: 200px;
+  }
 
-/* texty */
-	.velkyh1 {
-		padding-right: 20px;
-		font-size: 48px;
-	}
+  /* texty */
+  .velkyh1 {
+    padding-right: 20px;
+    font-size: 48px;
+  }
 
-	.malyh1 {
-		font-size: 28px;
-	}
-
+  .malyh1 {
+    font-size: 28px;
+  }
 }
